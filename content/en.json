@@ -3,9 +3,16 @@
     "navigation": {
       "home": "Home",
       "about": "About",
-      "contact": "Contact Us"
+      "contact": "Contact Us",
+      "project": "Project"
     },
     "title": "Internationalization(i18n) in Next.js 14",
     "description": "Next.js 14 introduces enhanced internationalization (i18n) features, empowering developers to effortlessly manage translations, locale-based routing, and content localization for globally accessible web applications. <br /> <br />This also piggy-backs built-in support for multiple locales, dynamic content loading, and robust fallback handling."
+  },
+  "Slider": {
+    "images": {
+      "title": "Images",
+      "content": "CV LIFE's mission is to create the highest utility values ​​for Vietnamese people in modern consumption and maximize utility on the basis of automation technology."
+    }
   }
 }

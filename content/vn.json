@@ -1,0 +1,15 @@
+{
+  "Home": {
+    "navigation": {
+      "home": "Trang chủ",
+      "about": "Giới thiệu",
+      "contact": "Liên hệ",
+      "project": "Dự án",
+      "news": "Tin tức",
+      "services": "Dịch vụ"
+    },
+    "title": "Sứ mệnh CV LIFE",
+    "description": "Sứ mệnh của CV LIFE là tạo ra những giá trị tiện ích cao nhất cho người dân Việt Nam trong tiêu dùng hiện đại và tối đa hóa tiện ích trên nền tảng công nghệ tự động hóa.",
+    "explore": "Khám phá"
+  }
+}

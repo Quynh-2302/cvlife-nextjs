@@ -2,6 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --background: 0, 0%, 100%;
+    --foreground: 240, 10%, 3.9%;
+    --card: 0, 0%, 100%;
+    --card-foreground: 240, 10%, 3.9%;
+    --popover: 0, 0%, 100%;
+    --popover-foreground: 240, 10%, 3.9%;
+    --primary: 240, 5.9%, 10%;
+    --primary-foreground: 0, 0%, 98%;
+    --secondary: 240, 4.8%, 95.9%;
+    --secondary-foreground: 240, 5.9%, 10%;
+    --muted: 240, 4.8%, 95.9%;
+    --muted-foreground: 240, 3.8%, 46.1%;
+    --accent: 240, 4.8%, 95.9%;
+    --accent-foreground: 240, 5.9%, 10%;
+    --destructive: 0, 84.2%, 60.2%;
+    --destructive-foreground: 0, 0%, 98%;
+    --border: 240, 5.9%, 90%;
+    --input: 240, 5.9%, 90%;
+    --ring: 240, 5.9%, 10%;
+    --radius: 0.5rem;
+
+    /* CUSTOM TOKEN */
+
+    --header-h: 3.4375rem;
+
+    --success: 165, 100%, 37%;
+    --success-light: 166, 58%, 90%;
+
+    --error: 14, 100%, 56%;
+    --error-light: 15, 100%, 93%;
+
+    --warning: 40, 100%, 56%;
+    --warning-light: 40, 100%, 93%;
+
+    --info: 225, 98%, 35%;
+    --info-light: 227, 56%, 94%;
+
+    --divider: 240, 85%, 90%;
+  }
+
+  .dark {
+    --background: 240, 10%, 3.9%;
+    --foreground: 0, 0%, 98%;
+    --card: 240, 10%, 3.9%;
+    --card-foreground: 0, 0%, 98%;
+    --popover: 240, 10%, 3.9%;
+    --popover-foreground: 0, 0%, 98%;
+    --primary: 0, 0%, 98%;
+    --primary-foreground: 240, 5.9%, 10%;
+    --secondary: 240, 3.7%, 15.9%;
+    --secondary-foreground: 0, 0%, 98%;
+    --muted: 240, 3.7%, 15.9%;
+    --muted-foreground: 240, 5%, 64.9%;
+    --accent: 240, 3.7%, 15.9%;
+    --accent-foreground: 0, 0%, 98%;
+    --destructive: 0, 62.8%, 30.6%;
+    --destructive-foreground: 0, 0%, 98%;
+    --border: 240, 3.7%, 15.9%;
+    --input: 240, 3.7%, 15.9%;
+    --ring: 240, 4.9%, 83.9%;
+  }
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -68,7 +132,7 @@
   line-height: 0px;
   top: 0;
   left: 100%;
-  z-index: 10;
+  z-index: 40;
 }
 #left-img::after {
   content: "";
@@ -78,10 +142,10 @@
   left: 100%;
   top: 0;
   display: block;
-  z-index: 10;
+  z-index: 40;
 }
 
-.image-container::before {
+.slide-first::before {
   content: "";
   position: absolute;
   top: 0;
@@ -89,12 +153,37 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(
-    to right,
-    rgba(47, 37, 25, 0.55),
-    rgba(47, 37, 25, 0.25)
+    to left,
+    rgba(47, 37, 25, 0.25),
+    rgba(47, 37, 25, 0.55) 40%,
+    rgba(47, 37, 25, 0) 60%
   );
   z-index: 1;
 }
-.image-container img {
-  z-index: 0;
+
+.slide-second::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(47, 37, 25, 0.25),
+    rgba(47, 37, 25, 0.55) 40%,
+    rgba(47, 37, 25, 0) 60%
+  );
+  z-index: 1;
+}
+
+.image-slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  filter: blur(10px);
+  z-index: 2;
 }

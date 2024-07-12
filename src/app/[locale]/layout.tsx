@@ -1,3 +1,4 @@
+import { NextIntlClientProvider } from "next-intl";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../../globals.css";
@@ -22,7 +23,9 @@ interface RootLayoutProps {
 export default function RootLayout({ children, locale }: RootLayoutProps) {
   return (
     <html lang={locale}>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+      </body>
     </html>
   );
 }
